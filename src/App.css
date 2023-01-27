@@ -1,0 +1,38 @@
+.App {
+  min-width: 270px;
+  max-width: 1280px;
+  min-height: 700px;
+  margin: auto;
+}
+
+.accolade-box {
+  border: 1px solid white;
+  min-width: 270px;
+  max-width: 1280px;
+  min-height: 700px;
+  margin: auto;
+}
+.upload-box {
+  height: 100%;
+  overflow-y: auto;
+}
+.accolade-box > h3 {
+  text-align: center;
+}
+.nav-box {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-box > button {
+  border: none;
+  margin: 0 1rem;
+  width: 15%;
+}
+
+.image-box {
+  display: flex;
+  flex-flow: column nowrap;
+}
+/* TODO */
+/* Use snap-to and overflow-x to enable "paginated" carousel */
