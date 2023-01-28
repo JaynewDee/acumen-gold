@@ -17,21 +17,21 @@ const badgesData: AccoladeType[] = [
   {
     id: 11,
     category: "badges",
-    name: "Cloud Quest",
+    name: "Cloud Quest - DevOps",
     active: false,
     status: "complete"
   },
   {
     id: 99,
     category: "badges",
-    name: "Cloud Quest",
+    name: "Cloud Quest - Security",
     active: false,
     status: "complete"
   },
   {
     id: 18,
     category: "badges",
-    name: "Cloud Quest",
+    name: "Cloud Quest - Solutions Architect",
     active: false,
     status: "complete"
   }
@@ -48,14 +48,14 @@ const certificatesData: AccoladeType[] = [
   {
     id: 22,
     category: "certificates",
-    name: "SMU BootCamp",
+    name: "Intro to Programming with Python",
     active: false,
     status: "in-progress"
   },
   {
     id: 222,
     category: "certificates",
-    name: "SMU BootCamp",
+    name: "CS50 - Intro to Computer Science",
     active: false,
     status: "in-progress"
   }
@@ -72,14 +72,14 @@ const certificationsData: AccoladeType[] = [
   {
     id: 36,
     category: "certifications",
-    name: "AWS Cloud Practitioner",
+    name: "AWS DevOps - Associate",
     active: false,
     status: "complete"
   },
   {
     id: 39,
     category: "certifications",
-    name: "AWS Cloud Practitioner",
+    name: "AWS Solutions Architect - Associate",
     active: false,
     status: "complete"
   }

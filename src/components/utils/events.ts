@@ -48,3 +48,14 @@ export const KeyHandler = (e) => {
 export const ClickHandler = (e) => {
   const { className } = e.target;
 };
+
+export const handleHorizontalScroll = (e, length, current, set) => {
+  const id = e.target.id;
+  const newIdx =
+    id === "left-btn" && current > 0
+      ? current - 1
+      : current < length - 1
+      ? current + 1
+      : e.preventDefault();
+  set(newIdx);
+};

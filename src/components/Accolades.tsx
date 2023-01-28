@@ -1,26 +1,17 @@
 import { useState } from "react";
 import { AccoladeType } from "./data/accolades";
-
+import { handleHorizontalScroll } from "./utils/events";
 const Accolades = ({ data }) => {
   const [current, setCurrent] = useState(0);
-
-  const handleHorizontalScroll = (e) => {
-    const id = e.target.id;
-    const newIdx =
-      id === "left-btn" && current > 0
-        ? current - 1
-        : current < data.length - 1
-        ? current + 1
-        : e.preventDefault();
-    setCurrent(newIdx);
-  };
 
   return (
     <>
       <div className="category-container">
         <button
           disabled={current === 0}
-          onClick={handleHorizontalScroll}
+          onClick={(e) =>
+            handleHorizontalScroll(e, data.length, current, setCurrent)
+          }
           id="left-btn"
           className="cycle-btn"
         >
@@ -37,7 +28,9 @@ const Accolades = ({ data }) => {
           : null}
         <button
           disabled={current === data.length - 1}
-          onClick={handleHorizontalScroll}
+          onClick={(e) =>
+            handleHorizontalScroll(e, data.length, current, setCurrent)
+          }
           id="right-btn"
           className="cycle-btn"
         >
