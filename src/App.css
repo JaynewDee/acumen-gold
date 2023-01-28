@@ -1,3 +1,23 @@
+* {
+  font-family: monospace;
+}
+
+:root {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
 .App {
   min-width: 270px;
   max-width: 1280px;
@@ -5,34 +25,49 @@
   margin: auto;
 }
 
-.accolade-box {
+.content-box {
   border: 1px solid white;
+  margin: auto;
+}
+
+.category-container > h3 {
+  pointer-events: none;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.accolade-box {
+  display: flex;
+  flex-flow: column nowrap;
   min-width: 270px;
   max-width: 1280px;
   min-height: 700px;
-  margin: auto;
-}
-.upload-box {
-  height: 100%;
-  overflow-y: auto;
-}
-.accolade-box > h3 {
-  text-align: center;
-}
-.nav-box {
-  display: flex;
-  justify-content: center;
 }
 
-.nav-box > button {
-  border: none;
-  margin: 0 1rem;
-  width: 15%;
+.upload-modal-box {
+  position: absolute;
+  transform: scale(0);
+  border: 1px solid white;
+  top: 10%;
+  right: 5%;
+  width: 90%;
+  background-color: white;
+  color: black;
+}
+.upload-btn {
+  margin-top: auto;
+}
+.upload-btn:hover {
+  cursor: pointer;
 }
 
-.image-box {
+.image-preview-box {
   display: flex;
   flex-flow: column nowrap;
+}
+
+hr {
+  width: 66%;
 }
 /* TODO */
 /* Use snap-to and overflow-x to enable "paginated" carousel */

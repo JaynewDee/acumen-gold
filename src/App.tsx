@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 
 import { AccoladeBox as Container } from "./components/AccoladeBox";
-import CatNav from "./components/Nav.tsx/CatNav";
 
 // Badges
 // Certificates

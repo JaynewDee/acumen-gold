@@ -1,0 +1,16 @@
+.nav-box {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  width: 100%;
+}
+.nav-btn {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 30%;
+}
+.nav-btn:hover,
+.nav-btn-active {
+  background-color: white;
+  color: black;
+}

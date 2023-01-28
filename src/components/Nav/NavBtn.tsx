@@ -1,5 +1,4 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { activeStyles, inactiveStyles } from "./styles";
 import { NavBtnProps } from "./types";
 
 const NavBtn: React.FC<NavBtnProps> = ({
@@ -26,7 +25,9 @@ const NavBtn: React.FC<NavBtnProps> = ({
 
   return (
     <button
-      style={isActive ? activeStyles : inactiveStyles}
+      className={
+        "nav-btn " + (isActive ? "nav-btn-active" : "nav-btn-inactive")
+      }
       onClick={handleNavigationSwitch}
     >
       {cat.toUpperCase()}
