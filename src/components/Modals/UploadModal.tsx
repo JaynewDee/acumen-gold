@@ -1,5 +1,7 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import ReactDOM from "react-dom";
+import ExitBtn from "./ExitBtn";
+import ImgPreview from "./ImgPreview";
 import "./styles.css";
 const UploadModal = ({
   modalState,
@@ -29,15 +31,8 @@ const UploadModal = ({
       className={
         modalState === "upload" ? "upload-modal-active" : "upload-modal-hide"
       }
-      // style={
-      //   modalState === "upload"
-      //     ? { transform: "scale(1)", transition: "all 1s" }
-      //     : { transform: "scale(0)", transition: "all 1s" }
-      // }
     >
-      <div className="exit-btn">
-        <button onClick={closeModal}>X</button>
-      </div>
+      <ExitBtn close={closeModal} />
       <h3>Upload</h3>
       <button onClick={handleClickDefer}>Choose File</button>
       <input
@@ -48,17 +43,7 @@ const UploadModal = ({
         accept=".gif,.jpg,.jpeg,.png"
         onChange={imgFilehandler}
       />
-      <h3>Preview</h3>
-      <div className="preview-images">
-        {imgFiles.map((elem) => (
-          <>
-            <span key={elem} className="image-preview-box">
-              <img key={elem} src={elem} height="100" width="100" alt="med1" />
-              <button key={elem + 25}>Edit Details</button>
-            </span>
-          </>
-        ))}
-      </div>
+      <ImgPreview images={imgFiles} />
     </div>,
     document.getElementById("upload-modal-root") as HTMLElement
   );

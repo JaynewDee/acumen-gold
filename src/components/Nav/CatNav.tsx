@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import NavBtn from "./NavBtn";
 import { CategoryNavProps } from "./types";
 import "./styles.css";
-import { KeyHandler } from "../utils/events";
 
 const categories = ["badges", "certificates", "certifications", "skills"];
 
@@ -10,7 +9,6 @@ const CatNav: React.FC<CategoryNavProps> = ({
   displayState,
   setDisplayState
 }) => {
-  const focusRef = useRef(null);
   return (
     <div
       className="nav-box"
@@ -22,7 +20,6 @@ const CatNav: React.FC<CategoryNavProps> = ({
     >
       {categories.map((cat) => (
         <NavBtn
-          // focusRef={focusRef}
           key={cat}
           cat={cat}
           displayState={displayState}

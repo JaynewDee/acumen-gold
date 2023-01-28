@@ -1,14 +1,4 @@
-import { createRef, useEffect, useRef, useState } from "react";
-
-export const useNavState = (currentState) => {
-  const [navState, setNavState] = useState(currentState);
-};
-
-export const useDisplayState = (state, action) => {
-  const [displayState, setDisplayState] = useState();
-
-  return [displayState, setDisplayState];
-};
+import { useEffect } from "react";
 
 export const useFocusLog = () => {
   const logFocused = (e) =>

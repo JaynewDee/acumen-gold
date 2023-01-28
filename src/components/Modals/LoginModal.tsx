@@ -1,6 +1,8 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import ReactDOM from "react-dom";
+import ExitBtn from "./ExitBtn";
 import "./styles.css";
+
 const LoginModal = ({
   modalState,
   setModalState
@@ -15,16 +17,16 @@ const LoginModal = ({
   const closeModal = () => {
     setModalState("");
   };
+
   const modal = ReactDOM.createPortal(
     <div
       className={
         modalState === "login" ? "login-modal-active" : "login-modal-hide"
       }
     >
-      <div className="exit-btn">
-        <button onClick={closeModal}>X</button>
-      </div>
+      <ExitBtn close={closeModal} />
       <h3>LOGIN</h3>
+      <div></div>
     </div>,
     document.getElementById("login-modal-root") as HTMLElement
   );

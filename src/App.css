@@ -34,8 +34,7 @@ button:hover {
   margin: auto;
 }
 
-.content-item-container,
-.landing-box {
+.content-item-container {
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
@@ -48,11 +47,11 @@ button:hover {
   text-align: center;
 }
 .category-container {
-  width: 66%;
-  margin: auto;
   display: flex;
   flex-flow: row;
-  align-items: space-between;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .category-body {
   padding: 1rem;
@@ -77,6 +76,7 @@ button:hover {
   width: 24px;
   margin: 1rem 1rem auto auto;
   border-radius: 50%;
+  outline: 1px dashed black;
 }
 .exit-btn > button:hover {
   background-color: white;
