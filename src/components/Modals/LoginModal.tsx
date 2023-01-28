@@ -18,13 +18,11 @@ const LoginModal = ({
   const modal = ReactDOM.createPortal(
     <div
       className={
-        "login-modal-box" +
-        (modalState === "login" ? " login-modal-active" : "")
+        modalState === "login" ? "login-modal-active" : "login-modal-hide"
       }
-      style={modalState === "login" ? { transform: "scale(1)" } : {}}
     >
-      <div>
-        <button onClick={closeModal}>Exit</button>
+      <div className="exit-btn">
+        <button onClick={closeModal}>X</button>
       </div>
       <h3>LOGIN</h3>
     </div>,

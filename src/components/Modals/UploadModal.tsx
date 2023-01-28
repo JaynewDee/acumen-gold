@@ -27,12 +27,16 @@ const UploadModal = ({
   const modal = ReactDOM.createPortal(
     <div
       className={
-        "upload-modal-box" +
-        (modalState === "upload" ? " upload-modal-active" : "")
+        modalState === "upload" ? "upload-modal-active" : "upload-modal-hide"
       }
+      // style={
+      //   modalState === "upload"
+      //     ? { transform: "scale(1)", transition: "all 1s" }
+      //     : { transform: "scale(0)", transition: "all 1s" }
+      // }
     >
-      <div>
-        <button onClick={closeModal}>Exit</button>
+      <div className="exit-btn">
+        <button onClick={closeModal}>X</button>
       </div>
       <h3>Upload</h3>
       <button onClick={handleClickDefer}>Choose File</button>

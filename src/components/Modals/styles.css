@@ -1,0 +1,56 @@
+.upload-modal-active,
+.login-modal-active {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 7px;
+  top: 10%;
+  right: 5%;
+  width: 90%;
+  height: 33%;
+  background-color: rgba(255, 255, 255, 0.87);
+  color: black;
+}
+.upload-modal-hide,
+.login-modal-hide {
+  animation: toggleOut 0.33s ease-in-out 0s alternate;
+}
+
+.upload-btn:hover,
+.login-btn:hover {
+  cursor: pointer;
+  transform: scaleY(1.09);
+  transition: all 0.11s;
+  letter-spacing: 0.1rem;
+}
+.login-btn {
+  margin-top: auto;
+}
+.login-btn,
+.upload-btn {
+  transition: all 0.11s;
+}
+.image-preview-box {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.preview-images {
+  display: flex;
+}
+h3 {
+  text-align: center;
+}
+
+@keyframes toggleIn {
+  0% {
+    transform: scaleX(0) scaleY(0);
+  }
+  50% {
+    transform: scaleX(0) scaleY(1);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
