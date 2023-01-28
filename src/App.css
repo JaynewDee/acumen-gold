@@ -35,7 +35,9 @@
   margin-top: 2rem;
   text-align: center;
 }
-
+.category-body {
+  padding: 1rem;
+}
 .accolade-box {
   display: flex;
   flex-flow: column nowrap;
@@ -48,11 +50,14 @@
   position: absolute;
   transform: scale(0);
   border: 1px solid white;
+  border-radius: 7px;
   top: 10%;
   right: 5%;
   width: 90%;
-  background-color: white;
+  height: 33%;
+  background-color: rgba(255, 255, 255, 0.87);
   color: black;
+  overflow: auto;
 }
 .upload-btn {
   margin-top: auto;

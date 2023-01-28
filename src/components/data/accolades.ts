@@ -9,7 +9,11 @@ export interface AccoladeType {
   status: Status;
 }
 
-export const AccoladesData = {
+/* 
+  Mock, hard-coded image data revealing structure of upload information
+*/
+
+export const { badges, certificates, certifications } = {
   badges: [
     {
       id: 1,
