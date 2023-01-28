@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { createRef, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 const UploadModal = ({ modalState }: { modalState: boolean }) => {
   const [imgFiles, uploadimg] = useState([]);
+
   const imgFilehandler = (e) => {
     if (e.target.files.length !== 0) {
       uploadimg((imgfiles) => [
@@ -11,6 +12,9 @@ const UploadModal = ({ modalState }: { modalState: boolean }) => {
       ]);
     }
   };
+  const handleClickDefer = () => {
+    document.getElementById("invisible-input").click();
+  };
   console.log(imgFiles);
   const modal = ReactDOM.createPortal(
     <div
@@ -18,7 +22,15 @@ const UploadModal = ({ modalState }: { modalState: boolean }) => {
       style={modalState ? { transform: "scale(1)" } : {}}
     >
       <h3>Upload</h3>
-      <input type="file" onChange={imgFilehandler} />
+      <button onClick={handleClickDefer}>Choose File</button>
+      <input
+        id="invisible-input"
+        style={{ display: "none" }}
+        type="file"
+        name="upload-input"
+        accept=".gif,.jpg,.jpeg,.png"
+        onChange={imgFilehandler}
+      />
       <h3>Preview</h3>
       {imgFiles.map((elem) => (
         <>
