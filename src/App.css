@@ -34,6 +34,14 @@ button:hover {
   margin: auto;
 }
 
+.content-item-container,
+.landing-box {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 66%;
+  margin: 2rem auto;
+}
 .category-container > h3 {
   pointer-events: none;
   margin-top: 2rem;

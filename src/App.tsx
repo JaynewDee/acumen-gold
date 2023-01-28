@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import "./App.css";
 
 import { AccoladeBox as Container } from "./components/AccoladeBox";
+import { ClickHandler, KeyHandler } from "./components/utils/events";
 
 // Badges
 // Certificates
@@ -12,17 +13,6 @@ import { AccoladeBox as Container } from "./components/AccoladeBox";
 const App: React.FC = () => {
   const [displayState, setDisplayState] = useState("");
 
-  const passActiveDown = () => {};
-  const passActiveUp = () => {};
-  const KeyHandler = (e) => {
-    console.log(e.key);
-    switch (e.key) {
-      case "ArrowDown":
-        passActiveDown();
-      case "ArrowUp":
-        passActiveUp();
-    }
-  };
   /* 
     - The state here at the highest level of our application will store
       navigation details that will be lifted from the CatNav component.
@@ -42,8 +32,22 @@ const App: React.FC = () => {
   */
 
   useEffect(() => {
+    const focusHandler = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      KeyHandler(e);
+    };
     document.addEventListener("keydown", KeyHandler);
-  });
+    document.addEventListener("click", ClickHandler);
+    document.addEventListener("focus", focusHandler);
+
+    return () => {
+      document.removeEventListener("keydown", KeyHandler);
+      document.removeEventListener("click", ClickHandler);
+      document.removeEventListener("focus", focusHandler);
+    };
+  }, []);
+  useEffect(() => {}, []);
   return (
     <div className="App">
       <Container

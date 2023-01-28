@@ -54,7 +54,7 @@ const UploadModal = ({
           <>
             <span key={elem} className="image-preview-box">
               <img key={elem} src={elem} height="100" width="100" alt="med1" />
-              <button>Edit Details</button>
+              <button key={elem + 25}>Edit Details</button>
             </span>
           </>
         ))}

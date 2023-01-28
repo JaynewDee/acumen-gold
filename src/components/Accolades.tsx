@@ -8,7 +8,7 @@ const Accolades = ({ data }) => {
 
       {data
         ? data.map(({ category, id, name }: AccoladeType) => (
-            <div key={id}>
+            <div className="content-item-container" key={id}>
               <h3 key={id}>{category.toUpperCase()}</h3>
               <div key={id + 1}>{name}</div>
             </div>
