@@ -7,22 +7,39 @@ export interface AccoladeType {
   name: String;
   active: boolean;
   status: Status;
+  level?: number;
 }
 
 /* 
   Mock, hard-coded image data revealing structure of upload information
 */
+const badgesData: AccoladeType[] = [
+  {
+    id: 1,
+    category: "badges",
+    name: "Cloud Quest",
+    active: false,
+    status: "complete",
+    level: 1
+  }
+];
+const Accolade = ({
+  id,
+  category,
+  name,
+  active,
+  status,
+  level
+}): AccoladeType => ({
+  id,
+  category,
+  name,
+  active,
+  status
+});
 
-export const { badges, certificates, certifications } = {
-  badges: [
-    {
-      id: 1,
-      category: "badges",
-      name: "Cloud Quest",
-      active: false,
-      status: "complete"
-    }
-  ],
+export const { badges, certificates, certifications, skills } = {
+  badges: badgesData,
   certificates: [
     {
       id: 2,
@@ -39,6 +56,15 @@ export const { badges, certificates, certifications } = {
       name: "AWS Cloud Practitioner",
       active: false,
       status: "complete"
+    }
+  ],
+  skills: [
+    {
+      id: 14,
+      category: "skills",
+      name: "JavaScript",
+      active: false,
+      level: 7
     }
   ]
 };

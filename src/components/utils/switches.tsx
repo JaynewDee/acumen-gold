@@ -1,5 +1,10 @@
 import Accolades from "../Accolades";
-import { badges, certificates, certifications } from "../data/accolades";
+import {
+  badges,
+  certificates,
+  certifications,
+  skills
+} from "../data/accolades";
 import Landing from "../Landing";
 
 export const categorySwitch = (state: any) => {
@@ -7,6 +12,7 @@ export const categorySwitch = (state: any) => {
     badges,
     certificates,
     certifications,
+    skills,
     "": ""
   };
 

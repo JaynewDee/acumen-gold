@@ -1,7 +1,13 @@
-import React, { createRef, useRef, useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
-const UploadModal = ({ modalState }: { modalState: boolean }) => {
+const UploadModal = ({
+  modalState,
+  setModalState
+}: {
+  modalState: boolean;
+  setModalState: Dispatch<SetStateAction<boolean>>;
+}) => {
   const [imgFiles, uploadimg] = useState([]);
 
   const imgFilehandler = (e) => {
@@ -15,12 +21,17 @@ const UploadModal = ({ modalState }: { modalState: boolean }) => {
   const handleClickDefer = () => {
     document.getElementById("invisible-input").click();
   };
-  console.log(imgFiles);
+  const closeModal = () => {
+    setModalState(false);
+  };
   const modal = ReactDOM.createPortal(
     <div
       className="upload-modal-box"
       style={modalState ? { transform: "scale(1)" } : {}}
     >
+      <div>
+        <button onClick={closeModal}>Exit</button>
+      </div>
       <h3>Upload</h3>
       <button onClick={handleClickDefer}>Choose File</button>
       <input

@@ -46,31 +46,6 @@
   min-height: 700px;
 }
 
-/* .upload-modal-box {
-  position: absolute;
-  transform: scale(0);
-  border: 1px solid white;
-  border-radius: 7px;
-  top: 10%;
-  right: 5%;
-  width: 90%;
-  height: 33%;
-  background-color: rgba(255, 255, 255, 0.87);
-  color: black;
-  overflow: auto;
-}
-.upload-btn {
-  margin-top: auto;
-}
-.upload-btn:hover {
-  cursor: pointer;
-}
-
-.image-preview-box {
-  display: flex;
-  flex-flow: column nowrap;
-} */
-
 hr {
   width: 66%;
 }

@@ -1,13 +1,15 @@
 .nav-box {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
-  margin: 1rem auto;
+  align-items: center;
+  margin: 2rem auto 1rem;
   width: 100%;
 }
 .nav-btn {
-  border-radius: 10px;
+  border-radius: 3px;
   cursor: pointer;
-  width: 30%;
+  min-width: 9rem;
 }
 .nav-btn:hover,
 .nav-btn-active {

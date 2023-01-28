@@ -7,6 +7,7 @@ import { AccoladeBox as Container } from "./components/AccoladeBox";
 // Certificates
 // Certifications
 // Honorable Mentions?
+// Skills?
 
 const App: React.FC = () => {
   const [displayState, setDisplayState] = useState("");
@@ -26,7 +27,7 @@ const App: React.FC = () => {
     - Use of the callback in the child component will change the state in this component,
       and this component will include a display switch that renders the respective Accolade category
     - This state variable will also determine the style of the nav buttons, depending
-      on which category/categories are active: true or active: false
+      on which category/categories are -> active: true || active: false
   */
   return (
     <div className="App">
