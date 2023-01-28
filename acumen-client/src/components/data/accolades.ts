@@ -96,16 +96,16 @@ const skillsData: AccoladeType[] = [
   {
     id: 65,
     category: "skills",
-    name: "JavaScript",
+    name: "Python",
     active: false,
-    level: 7
+    level: 5
   },
   {
     id: 669,
     category: "skills",
-    name: "JavaScript",
+    name: "AWS",
     active: false,
-    level: 7
+    level: 4
   }
 ];
 const Accolade = ({

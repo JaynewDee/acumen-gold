@@ -24,7 +24,7 @@
   cursor: pointer;
   transform: scaleY(1.09);
   transition: all 0.11s;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.06rem;
 }
 .login-btn {
   margin-top: auto;

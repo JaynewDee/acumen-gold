@@ -2,9 +2,11 @@
   "name": "acumen-gold",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./acumen-server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd acumen-server && npm install && cd ../acumen-client && npm install",
+    "dev": "concurrently \"cd acumen-server && npm start\" \"cd acumen-client && npm run dev\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JaynewDee/acumen-gold/issues"
   },
-  "homepage": "https://github.com/JaynewDee/acumen-gold#readme"
+  "homepage": "https://github.com/JaynewDee/acumen-gold#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
 }

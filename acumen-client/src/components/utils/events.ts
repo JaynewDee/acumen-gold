@@ -1,5 +1,18 @@
+const animateBtn = (btn) => {
+  if (btn.disabled) {
+    return;
+  }
+  btn.style.backgroundColor = "black";
+  btn.style.color = "white";
+  setTimeout(() => {
+    btn.style = {};
+  }, 66);
+};
+
 const handleKeyLeft = (e) => () => {
-  document.getElementById("left-btn").click();
+  const btn = document.getElementById("left-btn");
+  btn.click();
+  animateBtn(btn);
 };
 
 const handleKeyUp = (e) => () => {
@@ -12,7 +25,9 @@ const handleKeyUp = (e) => () => {
 };
 
 const handleKeyRight = (e) => () => {
-  document.getElementById("right-btn").click();
+  const btn = document.getElementById("right-btn");
+  btn.click();
+  animateBtn(btn);
 };
 
 const handleKeyDown = (e) => () => {
