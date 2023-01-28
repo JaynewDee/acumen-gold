@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 const ExitBtn = ({ close }: { close: Dispatch<SetStateAction<any>> }) => {
   return (

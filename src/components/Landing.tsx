@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Landing = () => {
   return (
     <div className="content-item-container">

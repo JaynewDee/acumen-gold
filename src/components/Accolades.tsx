@@ -1,5 +1,5 @@
-import React from "react";
 import { AccoladeType } from "./data/accolades";
+
 const Accolades = ({ data }) => {
   console.log(data);
   return (

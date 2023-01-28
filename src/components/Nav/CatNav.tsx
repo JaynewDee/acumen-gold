@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import NavBtn from "./NavBtn";
 import { CategoryNavProps } from "./types";
 import "./styles.css";
