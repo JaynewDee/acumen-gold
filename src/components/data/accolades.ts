@@ -41,6 +41,20 @@ const certificationsData: AccoladeType[] = [
     name: "AWS Cloud Practitioner",
     active: false,
     status: "complete"
+  },
+  {
+    id: 36,
+    category: "certifications",
+    name: "AWS Cloud Practitioner",
+    active: false,
+    status: "complete"
+  },
+  {
+    id: 39,
+    category: "certifications",
+    name: "AWS Cloud Practitioner",
+    active: false,
+    status: "complete"
   }
 ];
 

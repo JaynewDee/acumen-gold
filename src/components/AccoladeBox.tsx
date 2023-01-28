@@ -6,8 +6,7 @@ import UploadBtn from "./Modals/UploadBtn";
 import { SetState } from "./types";
 import LoginBtn from "./Modals/LoginBtn";
 import LoginModal from "./Modals/LoginModal";
-import { useFocusHandler, useFocusLog } from "./utils/hooks";
-import { KeyHandler } from "./utils/events";
+import { useFocusLog } from "./utils/hooks";
 
 interface DisplayProps {
   displayState: String;
@@ -26,14 +25,21 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
     <main className="content-box">
       <div className="accolade-box">
         <CatNav displayState={displayState} setDisplayState={setDisplayState} />
-        <hr />
+        <hr
+          style={
+            displayState === ""
+              ? { width: "33%", transition: "width .33s" }
+              : { width: "66%", transition: "width .33s" }
+          }
+        />
+        <h3>{displayState.toUpperCase()}</h3>
 
         {categorySwitch(displayState)}
         <LoginBtn setModalState={setModalState} />
         <UploadBtn setModalState={setModalState} />
         <LoginModal modalState={modalState} setModalState={setModalState} />
         <UploadModal modalState={modalState} setModalState={setModalState} />
-        <hr style={displayState === "" ? { width: "33%" } : { width: "66%" }} />
+        <hr />
       </div>
     </main>
   );

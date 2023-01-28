@@ -47,6 +47,10 @@ button:hover {
   margin-top: 2rem;
   text-align: center;
 }
+.category-container {
+  display: flex;
+  flex-flow: row;
+}
 .category-body {
   padding: 1rem;
 }
