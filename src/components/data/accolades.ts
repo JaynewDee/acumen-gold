@@ -6,7 +6,7 @@ export interface AccoladeType {
   category: Category;
   name: String;
   active: boolean;
-  status: Status;
+  status?: Status;
   level?: number;
 }
 
@@ -21,6 +21,36 @@ const badgesData: AccoladeType[] = [
     active: false,
     status: "complete",
     level: 1
+  }
+];
+
+const certificatesData: AccoladeType[] = [
+  {
+    id: 2,
+    category: "certificates",
+    name: "SMU BootCamp",
+    active: false,
+    status: "in-progress"
+  }
+];
+
+const certificationsData: AccoladeType[] = [
+  {
+    id: 3,
+    category: "certifications",
+    name: "AWS Cloud Practitioner",
+    active: false,
+    status: "complete"
+  }
+];
+
+const skillsData: AccoladeType[] = [
+  {
+    id: 14,
+    category: "skills",
+    name: "JavaScript",
+    active: false,
+    level: 7
   }
 ];
 const Accolade = ({
@@ -40,31 +70,7 @@ const Accolade = ({
 
 export const { badges, certificates, certifications, skills } = {
   badges: badgesData,
-  certificates: [
-    {
-      id: 2,
-      category: "certificates",
-      name: "SMU BootCamp",
-      active: false,
-      status: "in-progress"
-    }
-  ],
-  certifications: [
-    {
-      id: 3,
-      category: "certifications",
-      name: "AWS Cloud Practitioner",
-      active: false,
-      status: "complete"
-    }
-  ],
-  skills: [
-    {
-      id: 14,
-      category: "skills",
-      name: "JavaScript",
-      active: false,
-      level: 7
-    }
-  ]
+  certificates: certificatesData,
+  certifications: certificationsData,
+  skills: skillsData
 };

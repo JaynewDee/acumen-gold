@@ -32,6 +32,7 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
         */}
         <LoginBtn setModalState={setModalState} />
         <UploadBtn setModalState={setModalState} />
+        <hr />
       </div>
     </main>
   );

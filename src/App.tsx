@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import { AccoladeBox as Container } from "./components/AccoladeBox";
@@ -12,6 +12,17 @@ import { AccoladeBox as Container } from "./components/AccoladeBox";
 const App: React.FC = () => {
   const [displayState, setDisplayState] = useState("");
 
+  const passActiveDown = () => {};
+  const passActiveUp = () => {};
+  const KeyHandler = (e) => {
+    console.log(e.key);
+    switch (e.key) {
+      case "ArrowDown":
+        passActiveDown();
+      case "ArrowUp":
+        passActiveUp();
+    }
+  };
   /* 
     - The state here at the highest level of our application will store
       navigation details that will be lifted from the CatNav component.
@@ -29,6 +40,10 @@ const App: React.FC = () => {
     - This state variable will also determine the style of the nav buttons, depending
       on which category/categories are -> active: true || active: false
   */
+
+  useEffect(() => {
+    document.addEventListener("keydown", KeyHandler);
+  });
   return (
     <div className="App">
       <Container

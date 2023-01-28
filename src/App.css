@@ -63,8 +63,13 @@ button:hover {
   margin: 1rem 1rem auto auto;
   border-radius: 50%;
 }
+.exit-btn > button:hover {
+  background-color: white;
+  color: red;
+}
 hr {
   width: 66%;
+  border-radius: 50%;
 }
 /* TODO */
 /* Use snap-to and overflow-x to enable "paginated" carousel */
