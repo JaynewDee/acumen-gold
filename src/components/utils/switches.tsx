@@ -1,5 +1,6 @@
 import Accolades from "../Accolades";
 import { badges, certificates, certifications } from "../data/accolades";
+import Landing from "../Landing";
 
 export const categorySwitch = (state: any) => {
   const states = {
@@ -9,5 +10,5 @@ export const categorySwitch = (state: any) => {
     "": ""
   };
 
-  return <Accolades data={states[state]} /> || <div></div>;
+  return state === "" ? <Landing /> : <Accolades data={states[state]} />;
 };

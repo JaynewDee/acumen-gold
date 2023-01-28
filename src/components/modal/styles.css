@@ -1,4 +1,7 @@
 .upload-modal-box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   position: absolute;
   transform: scale(0);
   border: 1px solid white;
