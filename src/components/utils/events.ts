@@ -1,4 +1,6 @@
-const handleKeyLeft = (e) => () => {};
+const handleKeyLeft = (e) => () => {
+  document.getElementById("left-btn").click();
+};
 
 const handleKeyUp = (e) => () => {
   const previous = e.target.previousElementSibling;
@@ -9,7 +11,9 @@ const handleKeyUp = (e) => () => {
   }
 };
 
-const handleKeyRight = (e) => () => {};
+const handleKeyRight = (e) => () => {
+  document.getElementById("right-btn").click();
+};
 
 const handleKeyDown = (e) => () => {
   const next = e.target.nextElementSibling;
