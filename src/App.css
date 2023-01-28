@@ -39,6 +39,7 @@ button:hover {
   display: flex;
   flex-flow: column nowrap;
   margin: 1rem 3rem;
+  min-width: 300px;
 }
 .category-container > h3 {
   pointer-events: none;
@@ -47,15 +48,23 @@ button:hover {
 }
 .category-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  margin: 2rem;
+  /* min-width: 480px; */
+  max-width: 720px;
+  margin: 3rem auto 1rem;
 }
 .category-body {
 }
 .cycle-btn {
-  height: 2rem;
-  font-size: 133%;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  border: none;
+}
+.cycle-btn:hover {
+  background-color: white;
+  color: black;
 }
 button:disabled {
   pointer-events: none;
@@ -91,5 +100,14 @@ hr {
   width: 66%;
   border-radius: 50%;
 }
-/* TODO */
-/* Use snap-to and overflow-x to enable "paginated" carousel */
+
+@media screen and (max-width: 600px) {
+  .category-container {
+    flex-flow: column nowrap;
+  }
+  .content-item-container {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
