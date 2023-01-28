@@ -5,8 +5,8 @@ const Badges = () => {
     <div className="category-container">
       <h3>Badges</h3>
       <div className="category-body">
-        {badges.map((badge) => (
-          <div>{badge.name}</div>
+        {badges.map(({ id, name }) => (
+          <div key={id}>{name}</div>
         ))}
       </div>
     </div>

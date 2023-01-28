@@ -5,8 +5,8 @@ const Certifications = () => {
     <div className="category-container">
       <h3>Certifications</h3>
       <div className="category-body">
-        {certifications.map((cert) => (
-          <div>{cert.name}</div>
+        {certifications.map(({ id, name }) => (
+          <div key={id}>{name}</div>
         ))}
       </div>
     </div>

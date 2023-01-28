@@ -46,7 +46,7 @@
   min-height: 700px;
 }
 
-.upload-modal-box {
+/* .upload-modal-box {
   position: absolute;
   transform: scale(0);
   border: 1px solid white;
@@ -69,7 +69,7 @@
 .image-preview-box {
   display: flex;
   flex-flow: column nowrap;
-}
+} */
 
 hr {
   width: 66%;

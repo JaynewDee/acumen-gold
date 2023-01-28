@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-
+import "./styles.css";
 const UploadModal = ({ modalState }: { modalState: boolean }) => {
-  const [imgfile, uploadimg] = useState([]);
-  console.log("Image FIles", imgfile);
+  const [imgFiles, uploadimg] = useState([]);
   const imgFilehandler = (e) => {
     if (e.target.files.length !== 0) {
       uploadimg((imgfiles) => [
@@ -21,7 +20,7 @@ const UploadModal = ({ modalState }: { modalState: boolean }) => {
       <h3>Upload</h3>
       <input type="file" onChange={imgFilehandler} />
       <h3>Preview</h3>
-      {imgfile.map((elem) => (
+      {imgFiles.map((elem) => (
         <>
           <span key={elem} className="image-preview-box">
             <img src={elem} height="100" width="100" alt="med1" />
