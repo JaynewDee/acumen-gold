@@ -3,10 +3,10 @@ import React, { Dispatch, SetStateAction } from "react";
 const UploadBtn = ({
   setModalState
 }: {
-  setModalState: Dispatch<SetStateAction<boolean>>;
+  setModalState: Dispatch<SetStateAction<String>>;
 }) => {
   const handleModalToggle = () => {
-    setModalState((prev) => !prev);
+    setModalState((prev) => (prev === "upload" ? "" : "upload"));
   };
 
   return (

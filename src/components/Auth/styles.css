@@ -1,4 +1,4 @@
-.upload-modal-box {
+.login-modal-box {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -15,16 +15,9 @@
   overflow: auto;
   transition: all 1s;
 }
-.upload-btn {
+.login-btn {
   margin-top: auto;
 }
-.upload-btn:hover {
+.login-btn:hover {
   cursor: pointer;
-}
-.image-preview-box {
-  display: flex;
-  flex-flow: column nowrap;
-}
-h3 {
-  text-align: center;
 }
