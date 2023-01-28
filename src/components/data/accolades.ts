@@ -15,18 +15,45 @@ export interface AccoladeType {
 */
 const badgesData: AccoladeType[] = [
   {
-    id: 1,
+    id: 11,
     category: "badges",
     name: "Cloud Quest",
     active: false,
-    status: "complete",
-    level: 1
+    status: "complete"
+  },
+  {
+    id: 99,
+    category: "badges",
+    name: "Cloud Quest",
+    active: false,
+    status: "complete"
+  },
+  {
+    id: 18,
+    category: "badges",
+    name: "Cloud Quest",
+    active: false,
+    status: "complete"
   }
 ];
 
 const certificatesData: AccoladeType[] = [
   {
     id: 2,
+    category: "certificates",
+    name: "SMU BootCamp",
+    active: false,
+    status: "in-progress"
+  },
+  {
+    id: 22,
+    category: "certificates",
+    name: "SMU BootCamp",
+    active: false,
+    status: "in-progress"
+  },
+  {
+    id: 222,
     category: "certificates",
     name: "SMU BootCamp",
     active: false,
@@ -61,6 +88,20 @@ const certificationsData: AccoladeType[] = [
 const skillsData: AccoladeType[] = [
   {
     id: 14,
+    category: "skills",
+    name: "JavaScript",
+    active: false,
+    level: 7
+  },
+  {
+    id: 65,
+    category: "skills",
+    name: "JavaScript",
+    active: false,
+    level: 7
+  },
+  {
+    id: 669,
     category: "skills",
     name: "JavaScript",
     active: false,

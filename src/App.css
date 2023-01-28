@@ -48,8 +48,11 @@ button:hover {
   text-align: center;
 }
 .category-container {
+  width: 66%;
+  margin: auto;
   display: flex;
   flex-flow: row;
+  align-items: space-between;
 }
 .category-body {
   padding: 1rem;

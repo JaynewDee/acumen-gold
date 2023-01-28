@@ -1,4 +1,4 @@
-import { createRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import { AccoladeBox as Container } from "./components/AccoladeBox";
@@ -47,7 +47,6 @@ const App: React.FC = () => {
       document.removeEventListener("focus", focusHandler);
     };
   }, []);
-  useEffect(() => {}, []);
   return (
     <div className="App">
       <Container
