@@ -11,7 +11,7 @@ const UploadModal = ({ modalState }: { modalState: boolean }) => {
       ]);
     }
   };
-
+  console.log(imgFiles);
   const modal = ReactDOM.createPortal(
     <div
       className="upload-modal-box"
@@ -23,7 +23,7 @@ const UploadModal = ({ modalState }: { modalState: boolean }) => {
       {imgFiles.map((elem) => (
         <>
           <span key={elem} className="image-preview-box">
-            <img src={elem} height="100" width="100" alt="med1" />
+            <img key={elem} src={elem} height="100" width="100" alt="med1" />
             <button>Edit Details</button>
           </span>
         </>

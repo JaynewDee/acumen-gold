@@ -5,6 +5,7 @@ const Certificates = () => {
     <div className="category-container">
       <h3>Certificates</h3>
       <div className="category-body">
+        {/* Carousel will go here, wrapping the array of data items */}
         {certificates.map(({ id, name }) => (
           <div key={id}>{name}</div>
         ))}

@@ -21,3 +21,6 @@
   display: flex;
   flex-flow: column nowrap;
 }
+h3 {
+  text-align: center;
+}
