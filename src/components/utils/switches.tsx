@@ -1,12 +1,13 @@
-import Badges from "../category/Badges";
-import Certificates from "../category/Certificates";
-import Certifications from "../category/Certifications";
+import Accolades from "../Accolades";
+import { badges, certificates, certifications } from "../data/accolades";
 
 export const categorySwitch = (state: any) => {
   const states = {
-    badges: <Badges />,
-    certificates: <Certificates />,
-    certifications: <Certifications />
+    badges,
+    certificates,
+    certifications,
+    "": ""
   };
-  return states[state] || <div></div>;
+
+  return <Accolades data={states[state]} /> || <div></div>;
 };
