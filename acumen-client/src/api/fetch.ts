@@ -7,6 +7,6 @@
     - ...
 */
 
-export const getHome = async () => await fetch("/");
+export const getHome = async () => await fetch("http://localhost:3001/");
 
 export const getData = () => {};

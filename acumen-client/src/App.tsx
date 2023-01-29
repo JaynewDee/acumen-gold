@@ -3,7 +3,7 @@ import { getHome } from "./api/fetch";
 import "./App.css";
 
 import { AccoladeBox as Container } from "./components/AccoladeBox";
-import { ClickHandler, KeyHandler } from "./components/utils/events";
+import { KeyHandler } from "./components/utils/events";
 
 // Badges
 // Certificates
@@ -23,7 +23,7 @@ const App: React.FC = () => {
 
       === https://reactjs.org/docs/lifting-state-up.html ===
 
-    - We will pass the state setter / useState callback, into the CatNav.tsx component
+    - We will pass the state setter / useState callback into the CatNav.tsx component
       as a prop, and within the component we will implement a handler that changes the display
       state on click using the setter that was passed down into the component.
     - Use of the callback in the child component will change the state in this component,
@@ -33,20 +33,14 @@ const App: React.FC = () => {
   */
 
   useEffect(() => {
-    getHome().then((data) => console.log(data));
-    const focusHandler = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      KeyHandler(e);
-    };
+    getHome()
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+
     document.addEventListener("keydown", KeyHandler);
-    document.addEventListener("click", ClickHandler);
-    document.addEventListener("focus", focusHandler);
 
     return () => {
       document.removeEventListener("keydown", KeyHandler);
-      document.removeEventListener("click", ClickHandler);
-      document.removeEventListener("focus", focusHandler);
     };
   }, []);
   return (
