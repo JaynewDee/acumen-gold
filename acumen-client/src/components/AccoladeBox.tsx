@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { categorySwitch } from "./utils/switches";
 import CatNav from "./Nav/CatNav";
-import UploadBtn from "./Modals/UploadBtn";
 import { SetState } from "./types";
-import LoginBtn from "./Modals/LoginBtn";
 import { useFocusLog } from "./utils/hooks";
 import ModalSwitch from "./Modals/ModalSwitch";
+import BtnBox from "./Modals/Buttons/BtnBox";
 
 interface DisplayProps {
   displayState: String;
@@ -30,7 +29,8 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
               ? {
                   width: "33%",
                   transition: "width .47s",
-                  transitionDelay: ".47s"
+                  transitionDelay: ".47s",
+                  marginTop: "0"
                 }
               : {
                   width: "66%",
@@ -42,11 +42,8 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
 
         <h3>{displayState.toUpperCase()}</h3>
         {categorySwitch(displayState)}
-
-        <LoginBtn setModalState={setModalState} />
-        <UploadBtn setModalState={setModalState} />
+        <BtnBox setModalState={setModalState} />
         <ModalSwitch modalState={modalState} setModalState={setModalState} />
-        <hr style={{ margin: "1rem auto" }} />
       </div>
     </main>
   );

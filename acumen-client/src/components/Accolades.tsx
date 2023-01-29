@@ -37,7 +37,9 @@ const Accolades = ({ data }) => {
                   >
                     {level ? "LEVEL" : "STATUS"}
                   </h5>
-                  <p key={id * 18}>{level ? level : status.toUpperCase()}</p>
+                  <p style={{ margin: "0 auto" }} key={id * 18}>
+                    {level ? level : status.toUpperCase()}
+                  </p>
                   <div key={id * 21}>{level ? starSkillFill(level) : ""}</div>
                 </div>
               ))

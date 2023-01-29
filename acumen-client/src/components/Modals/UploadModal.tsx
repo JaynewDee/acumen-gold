@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import ReactDOM from "react-dom";
-import ExitBtn from "./ExitBtn";
+import ExitBtn from "./Buttons/ExitBtn";
 import ImgPreview from "./ImgPreview";
 import "./styles.css";
 const UploadModal = ({

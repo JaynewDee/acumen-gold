@@ -1,5 +1,6 @@
 import express from "express";
 
+const PORT = process.env.PORT || 3001;
 const server = express();
 
-server.listen(3001, () => console.log(`Listening @ 3001`));
+server.listen(PORT, () => console.log(`Listening @ ${PORT}`));

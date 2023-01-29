@@ -1,3 +1,19 @@
+.util-btn-box {
+  margin: auto auto 0;
+  display: flex;
+  justify-content: center;
+}
+.util-btns {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.util-btn-box > button {
+  border-radius: 3px;
+}
 .upload-modal-active,
 .login-modal-active {
   display: flex;
@@ -6,11 +22,11 @@
   position: absolute;
   border: 1px solid white;
   border-radius: 7px;
-  top: 9%;
+  top: 3%;
   right: 5%;
   width: 90%;
-  min-height: 30%;
-  max-height: 50%;
+  min-height: 50%;
+  max-height: 77%;
   background-color: rgba(255, 255, 255, 0.87);
   color: black;
 }
@@ -24,7 +40,7 @@
   cursor: pointer;
   transform: scaleY(1.09);
   transition: all 0.11s;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.03rem;
 }
 .login-btn {
   margin-top: auto;
@@ -32,7 +48,6 @@
 .login-btn,
 .upload-btn {
   transition: all 0.11s;
-  width: 44%;
   margin-left: auto;
   margin-right: auto;
 }

@@ -15,7 +15,7 @@ const CatNav: React.FC<CategoryNavProps> = ({
       style={
         displayState === ""
           ? {
-              transform: "translateY(150%)",
+              transform: "translateY(100%)",
               backgroundColor: "black",
               fontSize: "1.5rem"
             }
