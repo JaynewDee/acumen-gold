@@ -17,7 +17,12 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+:root,
+.App,
+.content-box,
+.accolade-box {
+  overflow: auto;
+}
 .App {
   min-width: 270px;
   max-width: 1280px;
@@ -31,7 +36,7 @@ button:hover {
 
 .content-box {
   border: 1px solid rgba(200, 200, 200, 0.9);
-  border-radius: 6px;
+  border-radius: 3px;
   margin: auto;
 }
 

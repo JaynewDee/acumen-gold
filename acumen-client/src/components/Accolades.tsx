@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AccoladeType } from "./data/accolades";
-import { starSkillFill } from "./data/icons";
+import { skillSwitch, starSkillFill } from "./data/icons";
 import { handleHorizontalScroll } from "./utils/events";
 const Accolades = ({ data }) => {
   const [current, setCurrent] = useState(0);
@@ -26,9 +26,15 @@ const Accolades = ({ data }) => {
                   <h4 key={id + 1}>
                     <em>{name}</em>
                   </h4>
-                  <h5>{level ? "LEVEL" : "STATUS"}</h5>
-                  <p>{level ? level : status.toUpperCase()}</p>
-                  <div>{level ? starSkillFill(level) : ""}</div>
+                  <div>{skillSwitch(name)}</div>
+                  <h5
+                    style={{ marginBottom: "0", marginTop: "3rem" }}
+                    key={id * 13}
+                  >
+                    {level ? "LEVEL" : "STATUS"}
+                  </h5>
+                  <p key={id * 18}>{level ? level : status.toUpperCase()}</p>
+                  <div key={id * 21}>{level ? starSkillFill(level) : ""}</div>
                 </div>
               ))
           : null}

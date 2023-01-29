@@ -11,16 +11,3 @@ export const useFocusLog = () => {
     };
   }, []);
 };
-
-export const useFocusHandler = () => {
-  const cycleFocus = (e) => {
-    const next = e.target.nextElementSibling;
-    if (next) {
-      next.focus();
-    }
-  };
-  useEffect(() => {
-    document.addEventListener("focus", cycleFocus, true);
-    return () => document.removeEventListener("focus", cycleFocus, true);
-  }, []);
-};

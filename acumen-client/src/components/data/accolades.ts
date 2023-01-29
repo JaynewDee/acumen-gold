@@ -106,6 +106,13 @@ const skillsData: AccoladeType[] = [
     name: "AWS",
     active: false,
     level: 4
+  },
+  {
+    id: 966,
+    category: "skills",
+    name: "React",
+    active: false,
+    level: 4
   }
 ];
 const Accolade = ({
@@ -120,7 +127,8 @@ const Accolade = ({
   category,
   name,
   active,
-  status
+  status,
+  level
 });
 
 export const { badges, certificates, certifications, skills } = {
