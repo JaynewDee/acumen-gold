@@ -22,7 +22,6 @@ const BtnBox = ({ setModalState }) => {
 
         <LoginBtn setModalState={setModalState} />
       </div>
-      <hr style={{ marginTop: "0", width: "33%", height: "1px" }}></hr>
     </div>
   );
 };
