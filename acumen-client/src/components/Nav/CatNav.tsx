@@ -3,7 +3,7 @@ import NavBtn from "./NavBtn";
 import { CategoryNavProps } from "./types";
 import "./styles.css";
 
-const categories = ["badges", "certificates", "certifications", "skills"];
+const categories = ["skills", "badges", "certificates", "certifications"];
 
 const CatNav: React.FC<CategoryNavProps> = ({
   displayState,
@@ -14,8 +14,12 @@ const CatNav: React.FC<CategoryNavProps> = ({
       className="nav-box"
       style={
         displayState === ""
-          ? { marginTop: "12rem", transition: "all 1s" }
-          : { transition: "all 1s" }
+          ? {
+              transform: "translateY(150%)",
+              backgroundColor: "black",
+              fontSize: "1.5rem"
+            }
+          : { transform: "translateY(0%)", fontSize: "1rem" }
       }
     >
       {categories.map((cat) => (

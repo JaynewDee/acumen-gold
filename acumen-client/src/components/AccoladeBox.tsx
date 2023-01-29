@@ -27,8 +27,16 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
         <hr
           style={
             displayState === ""
-              ? { width: "33%", transition: "width .33s" }
-              : { width: "66%", transition: "width .47s" }
+              ? {
+                  width: "33%",
+                  transition: "width .47s",
+                  transitionDelay: ".47s"
+                }
+              : {
+                  width: "66%",
+                  transition: "width .47s",
+                  transitionDelay: ".55s"
+                }
           }
         />
 

@@ -5,6 +5,8 @@
   align-items: center;
   margin: 2rem auto 1rem;
   width: 100%;
+  transition: all 0.66s;
+  padding: 1rem 0;
 }
 .nav-btn {
   border: 1px solid rgba(255, 255, 255, 0.67);
@@ -12,6 +14,9 @@
   cursor: pointer;
   min-width: 9rem;
   transition: all 0.11s;
+  font-size: 0.66rem;
+  margin: 0 auto;
+  transition: all 1s;
 }
 .nav-btn:hover,
 .nav-btn-active,

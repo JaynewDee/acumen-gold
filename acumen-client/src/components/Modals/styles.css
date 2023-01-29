@@ -32,6 +32,12 @@
 .login-btn,
 .upload-btn {
   transition: all 0.11s;
+  width: 44%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.upload-btn {
+  margin-top: 0;
 }
 .image-preview-box {
   display: flex;

@@ -73,14 +73,6 @@ export const handleHorizontalScroll = (e, length, current, set) => {
   console.log(el.parentElement.children[1]);
 
   const id = e.target.id;
-  const left = id === "left-btn";
-  const right = id === "right-btn";
-
-  if (left) {
-    el.parentElement.children[1].className = "category-hidden";
-  } else {
-    el.parentElement.children[1].className = "category-active";
-  }
 
   const newIdx =
     id === "left-btn" && current > 0

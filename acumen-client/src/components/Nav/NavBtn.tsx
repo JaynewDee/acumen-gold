@@ -25,6 +25,11 @@ const NavBtn: React.FC<NavBtnProps> = ({
 
   return (
     <button
+      style={
+        displayState === ""
+          ? { marginBottom: ".5rem", marginTop: ".5rem" }
+          : { marginBottom: "0rem" }
+      }
       className={
         "nav-btn " + (isActive ? "nav-btn-active" : "nav-btn-inactive")
       }
