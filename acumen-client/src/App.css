@@ -47,6 +47,10 @@ button:hover {
   margin: 1rem 3rem;
   min-width: 300px;
 }
+.content-item-container > h4 {
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
 .category-container > h3 {
   pointer-events: none;
   margin-top: 2rem;
@@ -58,7 +62,7 @@ button:hover {
   align-items: center;
   /* min-width: 480px; */
   max-width: 720px;
-  margin: 2rem auto 1rem;
+  margin: 1rem auto 1rem;
 }
 .category-body {
 }
@@ -108,6 +112,9 @@ hr {
   width: 66%;
   border-radius: 50%;
 }
+.icon-react {
+  animation: spin 15s infinite linear;
+}
 
 @media screen and (max-width: 600px) {
   .category-container {
@@ -117,5 +124,20 @@ hr {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

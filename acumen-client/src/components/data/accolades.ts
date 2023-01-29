@@ -112,7 +112,7 @@ const skillsData: AccoladeType[] = [
     category: "skills",
     name: "React",
     active: false,
-    level: 4
+    level: 6
   }
 ];
 const Accolade = ({

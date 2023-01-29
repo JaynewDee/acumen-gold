@@ -22,11 +22,11 @@ const Accolades = ({ data }) => {
           ? data
               .filter((_, idx) => idx === current)
               .map(({ category, id, name, level, status }: AccoladeType) => (
-                <div className="content-item-container" key={id}>
+                <div className="content-item-container" key={id * 50}>
                   <h4 key={id + 1}>
                     <em>{name}</em>
                   </h4>
-                  <div>{skillSwitch(name)}</div>
+                  <div key={id * 99}>{skillSwitch(name)}</div>
                   <h5
                     style={{ marginBottom: "0", marginTop: "3rem" }}
                     key={id * 13}

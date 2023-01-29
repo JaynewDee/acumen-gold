@@ -20,5 +20,5 @@
   color: white(255, 217, 0, 0.516);
 }
 .nav-btn-active {
-  transform: scaleX(1.12) scaleY(1.09);
+  transform: scaleX(1.12) scaleY(1.12);
 }

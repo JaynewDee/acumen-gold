@@ -12,12 +12,10 @@ export const starSkillFill = (lvl) =>
 
 export const skillSwitch = (skillName) => {
   const skills = {
-    React: <SiReact className="skill-icon icon-react" size={"2rem"} />,
-    JavaScript: (
-      <SiJavascript className="skill-icon icon-react" size={"2rem"} />
-    ),
-    Python: <SiPython className="skill-icon icon-react" size={"2rem"} />,
-    AWS: <SiAmazonaws className="skill-icon icon-react" size={"2rem"} />
+    React: <SiReact className="skill-icon icon-react" size={"2.33rem"} />,
+    JavaScript: <SiJavascript className="skill-icon" size={"2.33rem"} />,
+    Python: <SiPython className="skill-icon" size={"2.33rem"} />,
+    AWS: <SiAmazonaws className="skill-icon" size={"2.33rem"} />
   };
   return skills[skillName] || <></>;
 };

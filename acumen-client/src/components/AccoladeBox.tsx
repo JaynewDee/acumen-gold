@@ -38,7 +38,7 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
         <LoginBtn setModalState={setModalState} />
         <UploadBtn setModalState={setModalState} />
         <ModalSwitch modalState={modalState} setModalState={setModalState} />
-        <hr style={{ marginTop: "1rem", marginBottom: "0" }} />
+        <hr style={{ margin: "1rem auto" }} />
       </div>
     </main>
   );
