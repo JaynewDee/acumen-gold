@@ -7,4 +7,6 @@
     - ...
 */
 
+export const getHome = async () => await fetch("/");
+
 export const getData = () => {};

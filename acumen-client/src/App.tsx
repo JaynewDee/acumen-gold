@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { getHome } from "./api/fetch";
 import "./App.css";
 
 import { AccoladeBox as Container } from "./components/AccoladeBox";
@@ -32,6 +33,7 @@ const App: React.FC = () => {
   */
 
   useEffect(() => {
+    getHome().then((data) => console.log(data));
     const focusHandler = (e) => {
       e.preventDefault();
       e.stopPropagation();

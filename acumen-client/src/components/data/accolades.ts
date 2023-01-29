@@ -15,21 +15,21 @@ export interface AccoladeType {
 */
 const badgesData: AccoladeType[] = [
   {
-    id: 11,
+    id: 1,
     category: "badges",
     name: "Cloud Quest - DevOps",
     active: false,
     status: "complete"
   },
   {
-    id: 99,
+    id: 2,
     category: "badges",
     name: "Cloud Quest - Security",
     active: false,
     status: "complete"
   },
   {
-    id: 18,
+    id: 3,
     category: "badges",
     name: "Cloud Quest - Solutions Architect",
     active: false,
@@ -39,21 +39,21 @@ const badgesData: AccoladeType[] = [
 
 const certificatesData: AccoladeType[] = [
   {
-    id: 2,
+    id: 4,
     category: "certificates",
     name: "SMU BootCamp",
     active: false,
     status: "in-progress"
   },
   {
-    id: 22,
+    id: 5,
     category: "certificates",
     name: "Intro to Programming with Python",
     active: false,
     status: "in-progress"
   },
   {
-    id: 222,
+    id: 6,
     category: "certificates",
     name: "CS50 - Intro to Computer Science",
     active: false,
@@ -63,21 +63,21 @@ const certificatesData: AccoladeType[] = [
 
 const certificationsData: AccoladeType[] = [
   {
-    id: 3,
+    id: 7,
     category: "certifications",
     name: "AWS Cloud Practitioner",
     active: false,
     status: "complete"
   },
   {
-    id: 36,
+    id: 8,
     category: "certifications",
     name: "AWS DevOps - Associate",
     active: false,
     status: "complete"
   },
   {
-    id: 39,
+    id: 9,
     category: "certifications",
     name: "AWS Solutions Architect - Associate",
     active: false,
@@ -87,28 +87,28 @@ const certificationsData: AccoladeType[] = [
 
 const skillsData: AccoladeType[] = [
   {
-    id: 14,
+    id: 10,
     category: "skills",
     name: "JavaScript",
     active: false,
     level: 7
   },
   {
-    id: 65,
+    id: 11,
     category: "skills",
     name: "Python",
     active: false,
     level: 5
   },
   {
-    id: 669,
+    id: 12,
     category: "skills",
     name: "AWS",
     active: false,
     level: 4
   },
   {
-    id: 966,
+    id: 13,
     category: "skills",
     name: "React",
     active: false,
