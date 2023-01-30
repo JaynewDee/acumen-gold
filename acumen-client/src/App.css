@@ -133,10 +133,10 @@ hr {
   top: 0.66rem;
   left: 2rem;
   width: 6rem;
-  opacity: 0.5;
+  color: rgba(250, 250, 250, 0.5);
 }
 .hint:hover {
-  opacity: 1;
+  color: rgba(230, 230, 230, 1);
   cursor: pointer;
   transform: scale(1.1);
   user-select: none;

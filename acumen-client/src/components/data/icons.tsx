@@ -1,4 +1,4 @@
-import { GiPolarStar, GiOpenBook } from "react-icons/gi";
+import { GiPolarStar, GiOpenBook, GiMoon, GiSun } from "react-icons/gi";
 import { SiReact, SiJavascript, SiPython, SiAmazonaws } from "react-icons/si";
 import { MdStars } from "react-icons/md";
 import { TfiMedall } from "react-icons/tfi";
@@ -37,3 +37,6 @@ export const statusSwitch = (status) => {
   };
   return states[status] || <GiOpenBook size={sz} />;
 };
+
+export const Moon = (props) => <GiMoon {...props} />;
+export const Sun = (props) => <GiSun {...props} />;

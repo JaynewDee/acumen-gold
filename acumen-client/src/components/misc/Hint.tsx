@@ -26,7 +26,10 @@ const Hint = ({ display }: { display: String }) => {
     <>
       {display ? (
         <p className="hint" onClick={handleHintSwitch}>
-          <em style={{ fontSize: ".66rem" }}>Hint:</em> {hintState}
+          <em style={{ fontSize: ".66rem", color: "rgba(250,250,250,1)" }}>
+            Hint:
+          </em>{" "}
+          {hintState}
         </p>
       ) : (
         <></>

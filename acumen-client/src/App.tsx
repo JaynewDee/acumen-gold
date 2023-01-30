@@ -5,6 +5,7 @@ import cf from "catch-flow";
 const { catchSync, catchMap } = cf;
 import { AccoladeBox as Container } from "./components/AccoladeBox";
 import { KeyHandler } from "./components/utils/events";
+import { SettingsContextProvider } from "./context/settings";
 const { log } = console;
 // Badges
 // Certificates
@@ -46,10 +47,12 @@ const App: React.FC = () => {
   }, []);
   return (
     <div className="App">
-      <Container
-        displayState={displayState}
-        setDisplayState={setDisplayState}
-      />
+      <SettingsContextProvider>
+        <Container
+          displayState={displayState}
+          setDisplayState={setDisplayState}
+        />
+      </SettingsContextProvider>
     </div>
   );
 };
