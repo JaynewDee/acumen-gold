@@ -7,7 +7,7 @@ const hints = [
   "Login to add and modify your own accolades"
 ];
 
-const Hint = ({ display }: { display: String }) => {
+const Hint = ({ display, styles }: { display: String; styles: any }) => {
   const [hintState, setHintState] = useState(hints[0]);
 
   const handleHintSwitch = (e) => {
@@ -25,10 +25,8 @@ const Hint = ({ display }: { display: String }) => {
   return (
     <>
       {display ? (
-        <p className="hint" onClick={handleHintSwitch}>
-          <em style={{ fontSize: ".66rem", color: "rgba(250,250,250,1)" }}>
-            Hint:
-          </em>{" "}
+        <p className="hint" onClick={handleHintSwitch} style={styles}>
+          <em style={{ color: "gold", fontSize: ".77rem" }}>Hint:</em>{" "}
           {hintState}
         </p>
       ) : (

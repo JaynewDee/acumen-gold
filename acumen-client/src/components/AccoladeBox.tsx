@@ -28,6 +28,9 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
     backgroundColor: settings.theme.primaryColor,
     color: settings.theme.secondaryColor
   };
+  const hintStyles = {
+    color: settings.theme.hint.textColor
+  };
   return (
     <main className="content-box" style={themeState}>
       <div className="accolade-box">
@@ -40,7 +43,7 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
 
         <BtnBox setModalState={setModalState} />
         <ModalSwitch modalState={modalState} setModalState={setModalState} />
-        <Hint display={displayState} />
+        <Hint display={displayState} styles={hintStyles} />
       </div>
     </main>
   );

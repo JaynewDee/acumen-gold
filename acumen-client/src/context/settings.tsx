@@ -14,11 +14,17 @@ const useSettingsContext = () => {
 
 const defaultTheme = {
   primaryColor: "black",
-  secondaryColor: "white"
+  secondaryColor: "white",
+  hint: {
+    textColor: "white"
+  }
 };
 const lightTheme = {
   primaryColor: "white",
-  secondaryColor: "black"
+  secondaryColor: "black",
+  hint: {
+    textColor: "black"
+  }
 };
 const SettingsContextProvider = ({ children }) => {
   const [settings, updateSettings] = useState({
