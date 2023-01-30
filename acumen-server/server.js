@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import * as url from "url";
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
-console.log(__dirname);
+
 const PORT = process.env.PORT || 3001;
 
 async function launchServer() {

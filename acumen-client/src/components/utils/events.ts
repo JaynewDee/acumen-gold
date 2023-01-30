@@ -64,10 +64,6 @@ export const KeyHandler = (e) => {
   return events[e.key] ? events[e.key]() : null;
 };
 
-export const ClickHandler = (e) => {
-  const { className } = e.target;
-};
-
 export const handleHorizontalScroll = (e, length, current, set) => {
   const el = e.target;
   console.log(el.parentElement.children[1]);

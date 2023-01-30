@@ -1,4 +1,5 @@
 import React from "react";
+import Hint from "../../misc/Hint";
 import LoginBtn from "./LoginBtn";
 import SettingsBtn from "./SettingsBtn";
 import UploadBtn from "./UploadBtn";

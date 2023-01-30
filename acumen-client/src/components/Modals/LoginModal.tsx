@@ -1,7 +1,6 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import ReactDOM from "react-dom";
 import ExitBtn from "./Buttons/ExitBtn";
-import "./styles.css";
 
 const LoginModal = ({
   modalState,

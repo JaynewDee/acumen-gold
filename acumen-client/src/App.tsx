@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { getHome } from "./api/fetch";
 import "./App.css";
-
+import cf from "catch-flow";
+const { catchSync, catchMap } = cf;
 import { AccoladeBox as Container } from "./components/AccoladeBox";
 import { KeyHandler } from "./components/utils/events";
-
+const { log } = console;
 // Badges
 // Certificates
 // Certifications

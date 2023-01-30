@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
 import LoginModal from "./LoginModal";
 import UploadModal from "./UploadModal";
+import "./styles.css";
 
 interface ModalProps {
   modalState: String;

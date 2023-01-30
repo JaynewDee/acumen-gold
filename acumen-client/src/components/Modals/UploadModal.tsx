@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import ReactDOM from "react-dom";
 import ExitBtn from "./Buttons/ExitBtn";
 import ImgPreview from "./ImgPreview";
-import "./styles.css";
+
 const UploadModal = ({
   modalState,
   setModalState
@@ -12,7 +12,7 @@ const UploadModal = ({
 }) => {
   const [imgFiles, uploadimg] = useState([]);
 
-  const imgFilehandler = (e) => {
+  const handleImgFile = (e) => {
     if (e.target.files.length !== 0) {
       uploadimg((imgfiles) => [
         ...imgfiles,
@@ -41,7 +41,7 @@ const UploadModal = ({
         type="file"
         name="upload-input"
         accept=".gif,.jpg,.jpeg,.png"
-        onChange={imgFilehandler}
+        onChange={handleImgFile}
       />
       <ImgPreview images={imgFiles} />
     </div>,

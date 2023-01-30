@@ -5,6 +5,8 @@ import { SetState } from "./types";
 import { useFocusLog } from "./utils/hooks";
 import ModalSwitch from "./Modals/ModalSwitch";
 import BtnBox from "./Modals/Buttons/BtnBox";
+import TopHr from "./Nav/TopHr";
+import Hint from "./misc/Hint";
 
 interface DisplayProps {
   displayState: String;
@@ -23,27 +25,14 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
     <main className="content-box">
       <div className="accolade-box">
         <CatNav displayState={displayState} setDisplayState={setDisplayState} />
-        <hr
-          style={
-            displayState === ""
-              ? {
-                  width: "33%",
-                  transition: "width .47s",
-                  transitionDelay: ".47s",
-                  marginTop: "0"
-                }
-              : {
-                  width: "66%",
-                  transition: "width .47s",
-                  transitionDelay: ".55s"
-                }
-          }
-        />
+        <TopHr displayState={displayState} />
 
         <h3>{displayState.toUpperCase()}</h3>
         {categorySwitch(displayState)}
+
         <BtnBox setModalState={setModalState} />
         <ModalSwitch modalState={modalState} setModalState={setModalState} />
+        <Hint display={displayState} />
       </div>
     </main>
   );

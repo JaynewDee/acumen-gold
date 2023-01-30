@@ -1,11 +1,4 @@
-import {
-  Dispatch,
-  ForwardRefExoticComponent,
-  MutableRefObject,
-  RefAttributes,
-  RefObject,
-  SetStateAction
-} from "react";
+import { Dispatch, SetStateAction } from "react";
 
 export interface CategoryNavProps {
   displayState: String;

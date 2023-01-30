@@ -5,15 +5,17 @@ import { TfiMedall } from "react-icons/tfi";
 
 const randIdx = (length: number) => Math.floor(Math.random() * length);
 
-const StarIcon = (Component, key, color, size) => (
-  <Component size={size} key={key} color={color} />
-);
+const stars = [GiPolarStar, MdStars];
+const StarIcon = (Component, key, size) => (color) =>
+  <Component size={size} key={key} color={color} />;
+const starOptions = stars.map((starType) => StarIcon(starType, 55, "2.33rem"));
+console.log(starOptions[0]);
 export const starSkillFill = (lvl: number) =>
   [...Array(7).fill(0)].map((_, idx) =>
     idx < lvl ? (
-      <GiPolarStar key={lvl * idx} color={"gold"} />
+      <GiPolarStar key={1 + idx} color={"gold"} />
     ) : (
-      <GiPolarStar key={lvl * idx + 1} color={"white"} />
+      <GiPolarStar key={1000 + idx} color={"white"} />
     )
   );
 
