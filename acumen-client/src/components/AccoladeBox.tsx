@@ -5,7 +5,7 @@ import { SetState } from "./types";
 import { useFocusLog } from "./utils/hooks";
 import ModalSwitch from "./Modals/ModalSwitch";
 import BtnBox from "./Modals/Buttons/BtnBox";
-import TopHr from "./Nav/TopHr";
+import TopHr from "./misc/TopHr";
 import Hint from "./misc/Hint";
 import { useSettingsContext } from "../context/settings";
 import { Controls as ThemeControls } from "./Theme/Controls";
@@ -41,9 +41,9 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
         <h3>{displayState.toUpperCase()}</h3>
         {categorySwitch(displayState)}
 
+        <Hint display={displayState} styles={hintStyles} />
         <BtnBox setModalState={setModalState} />
         <ModalSwitch modalState={modalState} setModalState={setModalState} />
-        <Hint display={displayState} styles={hintStyles} />
       </div>
     </main>
   );

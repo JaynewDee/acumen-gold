@@ -7,13 +7,13 @@ const TopHr = ({ displayState }: { displayState: String }) => {
         style={
           displayState === ""
             ? {
-                width: "33%",
+                width: "33rem",
                 transition: "width .47s",
                 transitionDelay: ".47s",
                 marginTop: "0"
               }
             : {
-                width: "66%",
+                width: "33rem",
                 transition: "width .47s",
                 transitionDelay: ".55s"
               }
