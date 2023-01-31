@@ -1,76 +1,58 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import Accolade from "./Accolade";
+import HorizonScroll from "./Buttons/HorizonScroll";
 import { AccoladeType } from "./data/accolades";
-import { skillSwitch, starSkillFill, statusSwitch } from "./data/icons";
-import { handleHorizontalScroll } from "./utils/events";
 const Accolades = ({ data }) => {
   const [current, setCurrent] = useState(0);
 
   return (
     <>
-      <div className="category-container">
-        <button
-          disabled={current === 0}
-          onClick={(e) =>
-            handleHorizontalScroll(e, data.length, current, setCurrent)
-          }
-          id="left-btn"
-          className="cycle-btn"
-        >
-          {"<"}
-        </button>
-        {data
-          ? data
-              .filter((_, idx) => idx === current)
-              .map(
-                (
-                  {
-                    category,
-                    id,
-                    name,
-                    description,
-                    level,
-                    status
-                  }: AccoladeType,
-                  idx
-                ) => (
-                  <div className="content-item-container" key={idx + 1}>
-                    <h4>
-                      <em>{name}</em>
-                    </h4>
-                    {description ? <p></p> : <></>}
-                    <div>{skillSwitch(name)}</div>
-                    {level ? "" : <div>{statusSwitch(status)}</div>}
-
-                    <h5
-                      style={{
-                        marginBottom: "0",
-                        marginTop: ".33rem",
-                        textDecoration: "underline"
-                      }}
-                    >
-                      {level ? "LEVEL" : "STATUS"}
-                    </h5>
-                    <p style={{ margin: "0 auto" }}>
-                      {level ? level : status.toUpperCase()}
-                    </p>
-                    <div>{level ? starSkillFill(level) : ""}</div>
-                  </div>
-                )
+      <div className="category-container" key={current}>
+        <HorizonScroll
+          type="left"
+          current={current}
+          setCurrent={setCurrent}
+          length={data.length}
+        />
+        {data ? (
+          data
+            .filter((_: null, idx: number) => idx === current)
+            .map(
+              (
+                {
+                  category,
+                  id,
+                  name,
+                  description,
+                  level,
+                  status,
+                  active
+                }: AccoladeType,
+                idx
+              ) => (
+                <Accolade
+                  id={id}
+                  name={name}
+                  category={category}
+                  description={description}
+                  status={status}
+                  level={level}
+                  active={active}
+                />
               )
-          : null}
-        <button
-          disabled={current === data.length - 1}
-          onClick={(e) =>
-            handleHorizontalScroll(e, data.length, current, setCurrent)
-          }
-          id="right-btn"
-          className="cycle-btn"
-        >
-          {">"}
-        </button>
+            )
+        ) : (
+          <></>
+        )}
+        <HorizonScroll
+          type="right"
+          current={current}
+          setCurrent={setCurrent}
+          length={data.length}
+        />
       </div>
     </>
   );
 };
 
-export default Accolades;
+export default React.memo(Accolades);

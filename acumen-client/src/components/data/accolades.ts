@@ -1,10 +1,8 @@
-import { nanoid } from "nanoid";
-
 type Category = "badges" | "certificates" | "certifications" | "skills";
 type Status = "complete" | "in-progress";
 
 export interface AccoladeType {
-  id: String;
+  id: number;
   category: Category;
   name: String;
   active: boolean;
@@ -18,21 +16,21 @@ export interface AccoladeType {
 */
 const badgesData: AccoladeType[] = [
   {
-    id: nanoid(),
+    id: 1,
     category: "badges",
     name: "Cloud Quest - DevOps",
     active: false,
     status: "complete"
   },
   {
-    id: nanoid(),
+    id: 2,
     category: "badges",
     name: "Cloud Quest - Security",
     active: false,
     status: "complete"
   },
   {
-    id: nanoid(),
+    id: 3,
     category: "badges",
     name: "Cloud Quest - Solutions Architect",
     active: false,
@@ -42,21 +40,21 @@ const badgesData: AccoladeType[] = [
 
 const certificatesData: AccoladeType[] = [
   {
-    id: nanoid(),
+    id: 4,
     category: "certificates",
     name: "SMU BootCamp",
     active: false,
     status: "in-progress"
   },
   {
-    id: nanoid(),
+    id: 5,
     category: "certificates",
     name: "Intro to Programming with Python",
     active: false,
     status: "in-progress"
   },
   {
-    id: nanoid(),
+    id: 6,
     category: "certificates",
     name: "CS50 - Intro to Computer Science",
     active: false,
@@ -66,21 +64,21 @@ const certificatesData: AccoladeType[] = [
 
 const certificationsData: AccoladeType[] = [
   {
-    id: nanoid(),
+    id: 7,
     category: "certifications",
     name: "AWS Cloud Practitioner",
     active: false,
     status: "complete"
   },
   {
-    id: nanoid(),
+    id: 8,
     category: "certifications",
     name: "AWS DevOps - Associate",
     active: false,
     status: "complete"
   },
   {
-    id: nanoid(),
+    id: 9,
     category: "certifications",
     name: "AWS Solutions Architect - Associate",
     active: false,
@@ -90,28 +88,28 @@ const certificationsData: AccoladeType[] = [
 
 const skillsData: AccoladeType[] = [
   {
-    id: nanoid(),
+    id: 10,
     category: "skills",
     name: "JavaScript",
     active: false,
     level: 7
   },
   {
-    id: nanoid(),
+    id: 11,
     category: "skills",
     name: "Python",
     active: false,
     level: 5
   },
   {
-    id: nanoid(),
+    id: 12,
     category: "skills",
     name: "AWS",
     active: false,
     level: 4
   },
   {
-    id: nanoid(),
+    id: 13,
     category: "skills",
     name: "React",
     active: false,

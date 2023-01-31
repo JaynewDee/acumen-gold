@@ -1,0 +1,18 @@
+.theme-controls-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 1.5rem;
+  top: 1.5rem;
+  position: absolute;
+}
+
+.moon,
+.sun {
+  margin: 0.1rem;
+}
+.moon:hover,
+.sun:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

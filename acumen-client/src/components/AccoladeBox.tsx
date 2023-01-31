@@ -5,7 +5,10 @@ import { SetState } from "./types";
 import { useFocusLog } from "./utils/hooks";
 import ModalSwitch from "./Modals/ModalSwitch";
 import BtnBox from "./Modals/Buttons/BtnBox";
-
+import TopHr from "./misc/TopHr";
+import Hint from "./misc/Hint";
+import { useSettingsContext } from "../context/settings";
+import { Controls as ThemeControls } from "./Theme/Controls";
 interface DisplayProps {
   displayState: String;
   setDisplayState: SetState<String>;
@@ -17,31 +20,28 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
 }) => {
   const [modalState, setModalState] = useState("");
 
+  const { settings } = useSettingsContext();
+
   useFocusLog();
 
+  const themeState = {
+    backgroundColor: settings.theme.primaryColor,
+    color: settings.theme.secondaryColor
+  };
+  const hintStyles = {
+    color: settings.theme.hint.textColor
+  };
   return (
-    <main className="content-box">
+    <main className="content-box" style={themeState}>
       <div className="accolade-box">
+        <ThemeControls />
         <CatNav displayState={displayState} setDisplayState={setDisplayState} />
-        <hr
-          style={
-            displayState === ""
-              ? {
-                  width: "33%",
-                  transition: "width .47s",
-                  transitionDelay: ".47s",
-                  marginTop: "0"
-                }
-              : {
-                  width: "66%",
-                  transition: "width .47s",
-                  transitionDelay: ".55s"
-                }
-          }
-        />
+        <TopHr displayState={displayState} />
 
         <h3>{displayState.toUpperCase()}</h3>
         {categorySwitch(displayState)}
+
+        <Hint display={displayState} styles={hintStyles} />
         <BtnBox setModalState={setModalState} />
         <ModalSwitch modalState={modalState} setModalState={setModalState} />
       </div>

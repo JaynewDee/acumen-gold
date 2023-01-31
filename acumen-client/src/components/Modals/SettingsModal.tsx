@@ -1,18 +1,14 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import ReactDOM from "react-dom";
 import ExitBtn from "./Buttons/ExitBtn";
 
-const LoginModal = ({
+const SettingsModal = ({
   modalState,
   setModalState
 }: {
   modalState: String;
   setModalState: Dispatch<SetStateAction<String>>;
 }) => {
-  const [formState, updateFormState] = useState({
-    username: ""
-  });
-
   const closeModal = () => {
     setModalState("");
   };
@@ -20,16 +16,18 @@ const LoginModal = ({
   const modal = ReactDOM.createPortal(
     <div
       className={
-        modalState === "login" ? "login-modal-active" : "login-modal-hide"
+        modalState === "settings"
+          ? "settings-modal-active"
+          : "settings-modal-hide"
       }
     >
       <ExitBtn close={closeModal} />
-      <h3>LOGIN</h3>
+      <h3>SETTINGS</h3>
       <div></div>
     </div>,
     document.getElementById("login-modal-root") as HTMLElement
   );
-  return modalState === "login" ? modal : <></>;
+  return modalState === "settings" ? modal : <></>;
 };
 
-export default LoginModal;
+export default SettingsModal;

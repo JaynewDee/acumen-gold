@@ -12,3 +12,5 @@ export default defineConfig({
     }
   }
 });
+
+// http://acumen-dev-client-static.s3-website.us-east-2.amazonaws.com/

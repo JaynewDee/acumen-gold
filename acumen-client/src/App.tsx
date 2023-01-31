@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getHome } from "./api/fetch";
 import "./App.css";
-
 import { AccoladeBox as Container } from "./components/AccoladeBox";
 import { KeyHandler } from "./components/utils/events";
-
+import { SettingsContextProvider } from "./context/settings";
 // Badges
 // Certificates
 // Certifications
@@ -33,10 +31,6 @@ const App: React.FC = () => {
   */
 
   useEffect(() => {
-    getHome()
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-
     document.addEventListener("keydown", KeyHandler);
 
     return () => {
@@ -45,10 +39,12 @@ const App: React.FC = () => {
   }, []);
   return (
     <div className="App">
-      <Container
-        displayState={displayState}
-        setDisplayState={setDisplayState}
-      />
+      <SettingsContextProvider>
+        <Container
+          displayState={displayState}
+          setDisplayState={setDisplayState}
+        />
+      </SettingsContextProvider>
     </div>
   );
 };
