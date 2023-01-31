@@ -7,10 +7,15 @@ interface ScrollProps {
   length: number;
   setCurrent: Dispatch<SetStateAction<number>>;
 }
-const HorizonScroll = ({ type, current, length, setCurrent }) => {
+const HorizonScroll: React.FC<ScrollProps> = ({
+  type,
+  current,
+  length,
+  setCurrent
+}) => {
   return (
     <button
-      key={type}
+      key={current}
       disabled={type === "left" ? current === 0 : current === length - 1}
       onClick={(e) => handleHorizontalScroll(e, length, current, setCurrent)}
       id={type === "left" ? "left-btn" : "right-btn"}

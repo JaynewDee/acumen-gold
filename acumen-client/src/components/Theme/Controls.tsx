@@ -1,7 +1,6 @@
 import { Sun, Moon } from "../data/icons";
-import "./styles.css";
-import React from "react";
 import { useSettingsContext } from "../../context/settings";
+import "./styles.css";
 
 export const Controls = () => {
   const { useLightTheme, useDefaultTheme } = useSettingsContext();

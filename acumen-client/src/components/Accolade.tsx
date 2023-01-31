@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import React from "react";
 // <Accolade id, name, category, description, status, level/>
 import { AccoladeType } from "./data/accolades";

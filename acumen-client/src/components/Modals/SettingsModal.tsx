@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import ReactDOM from "react-dom";
 import ExitBtn from "./Buttons/ExitBtn";
 

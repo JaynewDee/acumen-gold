@@ -1,5 +1,3 @@
-import { nanoid } from "nanoid";
-
 type Category = "badges" | "certificates" | "certifications" | "skills";
 type Status = "complete" | "in-progress";
 

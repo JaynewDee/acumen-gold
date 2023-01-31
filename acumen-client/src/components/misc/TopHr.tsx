@@ -1,5 +1,3 @@
-import React from "react";
-
 const TopHr = ({ displayState }: { displayState: String }) => {
   return (
     <div>

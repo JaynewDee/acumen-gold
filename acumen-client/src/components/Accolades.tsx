@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Accolade from "./Accolade";
 import HorizonScroll from "./Buttons/HorizonScroll";
 import { AccoladeType } from "./data/accolades";
