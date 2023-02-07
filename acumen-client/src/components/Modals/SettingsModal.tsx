@@ -1,13 +1,14 @@
 import { Dispatch, SetStateAction } from "react";
 import ReactDOM from "react-dom";
 import Hint from "../misc/Hint";
+import { Controls } from "../Theme/Controls";
 import ExitBtn from "./Buttons/ExitBtn";
 
 const SettingsModal = ({
   modalState,
   setModalState
 }: {
-  modalState: String;
+  modalState: string;
   setModalState: Dispatch<SetStateAction<String>>;
 }) => {
   const closeModal = () => {
@@ -25,8 +26,9 @@ const SettingsModal = ({
       <ExitBtn close={closeModal} />
       <h3>SETTINGS</h3>
       <Hint display={modalState} />
+      <Controls modalState={modalState} />
     </div>,
-    document.getElementById("login-modal-root") as HTMLElement
+    document.getElementById("settings-modal-root") as HTMLElement
   );
   return modalState === "settings" ? modal : <></>;
 };

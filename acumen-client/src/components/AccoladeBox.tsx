@@ -10,7 +10,7 @@ import Hint from "./misc/Hint";
 import { useSettingsContext } from "../context/settings";
 import { Controls as ThemeControls } from "./Theme/Controls";
 interface DisplayProps {
-  displayState: String;
+  displayState: string;
   setDisplayState: SetState<String>;
 }
 
@@ -31,19 +31,23 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
     boxShadow: `inset 0px 0px 1px 2px ${settings.theme.secondaryColor}`
   };
   const hintStyles = {
-    color: settings.theme.hint.textColor
+    color: settings.theme.hint.textColor,
+    position: "absolute",
+    top: "1rem",
+    left: "2rem",
+    width: "6rem"
   };
   return (
     <main className="content-box" style={themeState}>
       <div className="accolade-box">
-        <ThemeControls />
+        <ThemeControls modalState={modalState} />
         <CatNav displayState={displayState} setDisplayState={setDisplayState} />
         <TopHr displayState={displayState} />
 
         <h3>{displayState.toUpperCase()}</h3>
         {categorySwitch(displayState)}
 
-        <Hint display={displayState} styles={hintStyles} />
+        <Hint display={modalState} type={"main"} />
         <BtnBox setModalState={setModalState} />
         <ModalSwitch modalState={modalState} setModalState={setModalState} />
       </div>

@@ -8,6 +8,12 @@
   z-index: 3;
 }
 
+/* .theme-settings-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
 .moon,
 .sun {
   margin: 0.1rem;
