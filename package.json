@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "cd acumen-server && npm install && cd ../acumen-client && npm install",
-    "dev": "concurrently \"cd acumen-server && npm start\" \"cd acumen-client && npm run dev\""
+    "dev": "concurrently \"cd acumen-server && npm start\" \"cd acumen-client && npm run dev\"",
+    "seed": "cd ./acumen-server/models/ && node seed.js"
   },
   "repository": {
     "type": "git",
