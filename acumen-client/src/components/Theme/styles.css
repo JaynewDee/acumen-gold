@@ -5,6 +5,7 @@
   right: 1.5rem;
   top: 1.5rem;
   position: absolute;
+  z-index: 3;
 }
 
 .moon,

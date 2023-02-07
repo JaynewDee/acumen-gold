@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import ReactDOM from "react-dom";
+import Hint from "../misc/Hint";
 import ExitBtn from "./Buttons/ExitBtn";
 
 const SettingsModal = ({
@@ -23,7 +24,7 @@ const SettingsModal = ({
     >
       <ExitBtn close={closeModal} />
       <h3>SETTINGS</h3>
-      <div></div>
+      <Hint display={modalState} />
     </div>,
     document.getElementById("login-modal-root") as HTMLElement
   );
