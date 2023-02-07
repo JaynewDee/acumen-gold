@@ -91,6 +91,7 @@ button:disabled {
   max-width: 1280px;
   min-height: 700px;
   overflow: hidden;
+  box-shadow: inset 0px 0px 2px 1px rgba(190, 190, 190, 0.783);
 }
 
 .exit-btn {

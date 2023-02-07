@@ -6,6 +6,7 @@ const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 const urlEncoded = express.urlencoded({
   extended: true
 });
+
 const statics = () =>
   process.env.NODE_ENV === "production"
     ? express.static(path.join(__dirname, "../acumen-client/build"))

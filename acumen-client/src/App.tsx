@@ -32,11 +32,11 @@ const App: React.FC = () => {
 
   useEffect(() => {
     document.addEventListener("keydown", KeyHandler);
-
     return () => {
       document.removeEventListener("keydown", KeyHandler);
     };
   }, []);
+
   return (
     <div className="App">
       <SettingsContextProvider>

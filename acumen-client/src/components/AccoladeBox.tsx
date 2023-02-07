@@ -23,10 +23,12 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
   const { settings } = useSettingsContext();
 
   useFocusLog();
+  //  box-shadow: inset 0px 0px 2px 1px rgba(190, 190, 190, 0.783);
 
   const themeState = {
     backgroundColor: settings.theme.primaryColor,
-    color: settings.theme.secondaryColor
+    color: settings.theme.secondaryColor,
+    boxShadow: `inset 0px 0px 1px 2px ${settings.theme.secondaryColor}`
   };
   const hintStyles = {
     color: settings.theme.hint.textColor

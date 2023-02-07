@@ -7,6 +7,7 @@ export const Controls = () => {
 
   const useMoon = () => useDefaultTheme();
   const useSun = () => useLightTheme();
+
   return (
     <div className="theme-controls-box">
       <div className="moon" onClick={useMoon}>
