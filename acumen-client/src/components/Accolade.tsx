@@ -1,4 +1,5 @@
 import React from "react";
+import { useSettingsContext } from "../context/settings";
 // <Accolade id, name, category, description, status, level/>
 import { AccoladeType } from "./data/accolades";
 import { skillSwitch, starSkillFill, statusSwitch } from "./data/icons";
@@ -10,6 +11,7 @@ const Accolade: React.FC<AccoladeType> = ({
   status,
   level
 }) => {
+  const { settings } = useSettingsContext();
   return (
     <div className="content-item-container" key={id}>
       <h4>
@@ -21,7 +23,9 @@ const Accolade: React.FC<AccoladeType> = ({
 
       <h5 className="item-h5">{level ? "LEVEL" : "STATUS"}</h5>
       <p style={{ margin: "0 auto" }}>{level ? level : status.toUpperCase()}</p>
-      <div>{level ? starSkillFill(level) : ""}</div>
+      <div>
+        {level ? starSkillFill(level, settings.theme.emptyIcon.color) : ""}
+      </div>
     </div>
   );
 };

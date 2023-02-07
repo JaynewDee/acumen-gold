@@ -13,17 +13,25 @@ const useSettingsContext = () => {
 };
 
 const defaultTheme = {
+  type: "dark",
   primaryColor: "black",
   secondaryColor: "white",
   hint: {
     textColor: "white"
+  },
+  emptyIcon: {
+    color: "white"
   }
 };
 const lightTheme = {
+  type: "light",
   primaryColor: "white",
   secondaryColor: "black",
   hint: {
     textColor: "black"
+  },
+  emptyIcon: {
+    color: "gray"
   }
 };
 const SettingsContextProvider = ({ children }) => {

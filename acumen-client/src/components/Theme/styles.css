@@ -18,8 +18,16 @@
 .sun {
   margin: 0.1rem;
 }
-.moon:hover,
-.sun:hover {
+
+.dark:focus,
+.light:focus {
+  filter: sepia(0.1);
+}
+.moon:hover > svg,
+.sun:hover > svg {
   cursor: pointer;
   transform: scale(1.1);
+  border: white;
+  border-radius: 50%;
+  outline: 1px solid black;
 }

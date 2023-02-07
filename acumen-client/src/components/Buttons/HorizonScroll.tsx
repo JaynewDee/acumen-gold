@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
+import { Left, Right } from "../data/icons";
 import { handleHorizontalScroll } from "../utils/events";
 
 interface ScrollProps {
@@ -21,7 +22,7 @@ const HorizonScroll: React.FC<ScrollProps> = ({
       id={type === "left" ? "left-btn" : "right-btn"}
       className="cycle-btn"
     >
-      {type === "left" ? "<" : ">"}
+      {type === "left" ? Left : Right}
     </button>
   );
 };

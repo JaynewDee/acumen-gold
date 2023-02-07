@@ -40,14 +40,17 @@ export const AccoladeBox: React.FC<DisplayProps> = ({
   return (
     <main className="content-box" style={themeState}>
       <div className="accolade-box">
-        <ThemeControls modalState={modalState} />
+        <ThemeControls
+          modalState={modalState}
+          displayState={settings.theme.type}
+        />
         <CatNav displayState={displayState} setDisplayState={setDisplayState} />
         <TopHr displayState={displayState} />
 
         <h3>{displayState.toUpperCase()}</h3>
         {categorySwitch(displayState)}
 
-        <Hint display={modalState} type={"main"} />
+        <Hint display={modalState} type={"main"} styles={hintStyles} />
         <BtnBox setModalState={setModalState} />
         <ModalSwitch modalState={modalState} setModalState={setModalState} />
       </div>

@@ -19,9 +19,9 @@ const BtnBox = ({ setModalState }) => {
       <div className="util-btn-box">
         <UploadBtn setModalState={setModalState} />
 
-        <SettingsBtn setModalState={setModalState} />
-
         <LoginBtn setModalState={setModalState} />
+
+        <SettingsBtn setModalState={setModalState} />
       </div>
     </div>
   );
